@@ -1,0 +1,3 @@
+- [ ] Update index.html section #two to replace ul.feature-icons with div.skills-grid containing individual article elements for each technology, each with specific FontAwesome icon and name.
+- [ ] Update assets/sass/main.scss to add styles for .skills-grid, making it a grid layout similar to .proyectos-grid, and add color styles for each technology icon.
+- [ ] Test the display by opening index.html in browser to ensure icons are colorful and elegant.
