@@ -3,7 +3,7 @@
 // Función para ampliar imágenes de servicios
 function initImageZoom() {
     // Agregar funcionalidad de clic a las imágenes de servicios
-    const serviceImages = document.querySelectorAll('.imagen1 img, .imagen2 img, .imagen3 img, .imagen4 img, .imagen5 img, .imagen6 img');
+    const serviceImages = document.querySelectorAll('.imagen1 img, .imagen2 img, .imagen3 img, .imagen4 img, .imagen5 img, .imagen6 img, .image.precios img');
 
     serviceImages.forEach(img => {
         img.style.cursor = 'pointer';
