@@ -1,1 +1,34 @@
-.vercel
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Build output
+dist/
+build/
+
+# Sensitive files
+secrets.json
+config.js
+assets/js/config.js
+
+# EmailJS keys and config (if stored in a separate file)
+emailjs-config.js

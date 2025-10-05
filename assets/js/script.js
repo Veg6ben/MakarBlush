@@ -56,10 +56,50 @@ function initImageZoom() {
     });
 }
 
+// Función para manejar el envío del formulario de contacto
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío por defecto
+
+            // Obtener los valores del formulario
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Validar que los campos no estén vacíos
+            if (!name || !email || !message) {
+                alert('Por favor, completa todos los campos.');
+                return;
+            }
+
+            // Configurar EmailJS (reemplaza con tus credenciales)
+            emailjs.init('rp54MXoD52S0wT9Yn'); // Clave pública proporcionada
+
+            // Enviar el email
+            emailjs.send('service_tpv0l42', 'template_l8pcros', {
+                name: name,
+                time: new Date().toLocaleString(),
+                message: message,
+                to_email: 'makarlashescejasymakeup@gmail.com'
+            })
+            .then(function(response) {
+                alert('Mensaje enviado exitosamente!');
+                contactForm.reset(); // Limpiar el formulario
+            }, function(error) {
+                alert('Error al enviar el mensaje. Inténtalo de nuevo.');
+                console.error('Error:', error);
+            });
+        });
+    }
+}
+
 // Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
     initImageZoom();
     initSliderNav();
+    initContactForm();
 });
 
 // Función para ajustar los botones del slider
